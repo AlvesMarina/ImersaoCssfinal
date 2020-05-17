@@ -1,0 +1,253 @@
+/* reset do css*/ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://www.publicdomainpictures.net/pictures/30000/nahled/background-pattern-black.jpg");
+    background-size: auto 100vh;
+    font-family: 'Handlee', cursive;
+    height:100vh;
+    font-size: 12px;
+  }
+/* media é como if, se a tela tiver pelo menos 400px, carregará o estilo */
+@media (min-width: 320px) {
+  body {
+    font-size: 10px;
+  }  
+}
+/*breakpoint*/
+/*@media (min-width: 375px) {
+  body{
+    font-size: 14px;
+  }
+  .menu a,
+  .sobre{
+    font-size: 10px;
+    
+  } 
+  @media (min-width: 420px) {
+    .menu a,
+    .sobre{
+      font-size: 11px;
+  } 
+    body{
+      font-size: 14px;
+    }
+    
+}*/
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+  .site-title{
+    background-size: auto 100vh;
+    justify-content: center;
+    padding: 20px;
+  }
+  .portifolio .grid{
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+    align-content: center;
+  }  
+}
+@media(min-width: 880px){
+  .portifolio .grid{
+    grid-template-columns: 240px 240px 240px;
+    justify-content: center;
+    align-content: center;
+  }  
+
+}
+@media(min-width: 1200px){
+  body{
+    font-size: 20px;
+  }
+  .img-portfolio{
+    height: auto;
+    width: 100%;
+  }
+
+}
+
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu{
+    background: black;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+  }
+  .menu a:active,
+  .menu a:hover{
+    background-color: white;
+    color: black;
+
+  }
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu li{
+    list-style: none;
+  }
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 1s, color 1s;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  .titulo{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: 2s linear 2s animacaoTitulo forwards;
+  }
+  @keyframes animacaoTitulo{
+      0%{
+
+      }
+      100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+  }
+  .site-subtitle,
+  .site-title{
+    color: white;
+    text-align: center;
+    }
+    .site-title{
+      font-size: 4em;
+      font-family: 'Source Code Pro', monospace;
+      
+    }
+  .site-subtitle{
+    font-style: italic;
+    font-size: 2em;
+    font-family: 'Handlee', cursive;
+    
+  }
+  .img-portfolio{
+    height: 80px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: transform 2s;
+    
+  }
+  .img-portfolio:active,
+  .img-portfolio:hover{
+    transform: scale(1.2) rotateY(25deg);
+  }
+  /*.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transfom 1s;
+  }
+  .flip-card:hover .card{
+    transform: rotateY(180deg);
+  }
+  .card-Front,
+  .card-verso{
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+  .card-verso{
+    background-color: mediumvioletred;
+    width: 150px;
+    height: 80px;
+    transform: rotateY(180deg);
+  }
+  .flip-card{
+    background-color: navy;
+    perspective: 1000px;
+  }*/
+  .sobre,
+  .contato,
+  .portifolio{
+   color: white;
+   font-family: 'Handlee', cursive;
+   font-size: 1.2em;
+   /*background-color: hotpink;*/
+   padding: 1em;
+   min-height: 100vh;
+  }
+  @media(min-width: 1200px){
+    .container{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sobre,
+    .contato,
+    .portifolio{
+       max-width: 1200px;
+  }
+  }
+  .sobre h2,
+  .contato h2,
+  .portifolio h2{
+   margin: 1em;
+  }
+  .sobre p{
+    text-indent: 2em;
+    margin-bottom: 0.5em;
+    text-align: justify;
+    
+  }
+  .sobre a:hover{
+    color: mediumblue;
+  }
+  /*.sobre .avatar{
+    float: right;
+    margin-left: 2em;
+  }
+  .sobre .avatar img{
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  }
+  @media(min-width: 600px){
+    .sobre .avatar img{
+      float: right;
+      margin-left: 2em;
+      border-radius: 50%;
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    }
+  }*/
+  .portifolio .grid{
+    display: grid;
+    gap: 0.1em;
+  }
+  .portifolio figure{
+    text-align: center;
+    height: auto;
+    padding: 0.2em;
+  }
+  .contato .icons{
+    text-align: center;
+  }
+  .contato a{
+      color: white;
+      font-size: 8em;
+      transition: text-shadow 1s;
+      padding: 0.2em;
+
+  }
+  .contato a:active,
+  .contato a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(255,255,255,2);
+  }
